@@ -1,0 +1,14 @@
+body {
+    background: url(imgs/highway.jpg) center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron {
+    background: transparent;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-align: center;
+}
