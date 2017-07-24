@@ -29,20 +29,34 @@
                     <div class="col-xs-10">
                         <input class="form-control" type="text" id="start" placeholder="Starting Location">
                     </div>
+                </div>
+                <div class="form-group">
                     <label class="col-xs-2 control-label" for="end">Ending Location:</label>
                     <div class="col-xs-10">
                         <input class="form-control" type="text" id="end" placeholder="Ending Location">
                     </div>
                 </div>
             </form>
+            <div class="col-xs-offset-2 col-xs-10">
+                <button class="btn btn-success btn-lg"  type="">Get Distance!</button>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="map">
+                
+            </div>
+            <div id="output">
+                
+            </div>
         </div>
         
     </div>
   
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwJ2Vepe9L2Miuh7QH87SR_RItIXHlX6Q&libraries=places"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="main.js"></script>
   </body>
 </html>
