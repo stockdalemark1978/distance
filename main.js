@@ -22,13 +22,28 @@
 
     //define calcRoute function
     funtion calcRoute() {
-        //create request
 
-        //pass the request to the route method
-            //if status OK
-                //Get distance and time
+        var request = {
+            origin: document.getElementById("from").value,
+            destination: document.getElementById("to").value,
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC
+        }
+        
+        directionsService.route(request, function(result, status){
+            if(status == google.maps.DirectionsStatus.OK){
+                console.log(result);
+
+                 //Get distance and time
+                window.alert("The distance is " + result.routes[0].legs[0].distance.text + ".<br/>The time is: " + result.routes[0].legs[0].duration.text + ".");
 
                 //display route using DirectionsRenderer object
+                directionsDisplay.setDirections(result);
+
+            }
+        });
+            
+               
 
                 //if status not OK
                     //delete route from map
