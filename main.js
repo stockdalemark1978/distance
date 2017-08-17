@@ -1,6 +1,6 @@
 //set map options
     console.log("I worked");
-    var myLatLng = {lat: 51.5, lng: -0.1};
+    var myLatLng = {lat: 38.0406, lng: -84.5037};
     var mapOptions = {
         center: myLatLng,
         zoom: 7,
@@ -35,7 +35,7 @@
                 console.log(result);
 
                  //Get distance and time
-                 $("#output").html("<div class='alert-info'>From:"+document.getElementById("start").value+".<br/>To:"+document.getElementById("end").value+".<br/> Driving distance: "+result.routes[0].legs[0].duration.text +". <br/>Duration: "+result.routes[0].legs[0].duration.text+". </div>");
+                 $("#output").html("<div class='alert-info'>From: "+document.getElementById("start").value+".<br/>To: "+document.getElementById("end").value+".<br/> Driving distance: "+result.routes[0].legs[0].duration.text +". <br/>Duration: "+result.routes[0].legs[0].duration.text+". </div>");
 
                 //display route using DirectionsRenderer object
                 directionsDisplay.setDirections(result);

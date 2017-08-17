@@ -13,8 +13,17 @@ body {
     text-align: center;
 }
 
+.alert-info {
+    padding: 10px;
+}
 #map {
     margin: 20px auto;
     width:100%; 
     height:300px;
+}
+
+#output {
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
 }
