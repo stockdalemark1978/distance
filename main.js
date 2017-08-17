@@ -24,8 +24,8 @@
     function calcRoute() {
 
         var request = {
-            origin: document.getElementById("from").value,
-            destination: document.getElementById("to").value,
+            origin: document.getElementById("start").value,
+            destination: document.getElementById("end").value,
             travelMode: google.maps.TravelMode.DRIVING,
             unitSystem: google.maps.UnitSystem.IMPERIAL
         }
@@ -35,7 +35,7 @@
                 console.log(result);
 
                  //Get distance and time
-                 $("#output").html("<div class='alert-info'>From:"+document.getElementById("from").value+".<br/>To:"+document.getElementById("to").value+".<br/> Driving distance: "+result.routes[0].legs[0].duration.text +". <br/>Duration: "+result.routes[0].legs[0].duration.text+". </div>");
+                 $("#output").html("<div class='alert-info'>From:"+document.getElementById("start").value+".<br/>To:"+document.getElementById("end").value+".<br/> Driving distance: "+result.routes[0].legs[0].duration.text +". <br/>Duration: "+result.routes[0].legs[0].duration.text+". </div>");
 
                 //display route using DirectionsRenderer object
                 directionsDisplay.setDirections(result);
@@ -57,8 +57,8 @@
         var options = {
             types: ['(cities)']
         }
-        var input1 = document.getElementById("from");
+        var input1 = document.getElementById("start");
         var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 
-        var input2 = document.getElementById("to");
+        var input2 = document.getElementById("end");
         var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
