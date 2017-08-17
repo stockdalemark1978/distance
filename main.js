@@ -35,7 +35,7 @@
                 console.log(result);
 
                  //Get distance and time
-                window.alert("The distance is " + result.routes[0].legs[0].distance.text + ".<br/>The time is: " + result.routes[0].legs[0].duration.text + ".");
+                 $("#output").html("<div class='alert-info'>From:"+document.getElementById("from").value+".<br/>To:"+document.getElementById("to").value+".<br/> Driving distance: "+result.routes[0].legs[0].duration.text +". <br/>Duration: "+result.routes[0].legs[0].duration.text+". </div>");
 
                 //display route using DirectionsRenderer object
                 directionsDisplay.setDirections(result);
