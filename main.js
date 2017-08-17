@@ -21,7 +21,7 @@
         directionsDisplay.setMap(map);
 
     //define calcRoute function
-    funtion calcRoute() {
+    function calcRoute() {
 
         var request = {
             origin: document.getElementById("from").value,
@@ -39,21 +39,26 @@
 
                 //display route using DirectionsRenderer object
                 directionsDisplay.setDirections(result);
-
+            }else{
                 //delete route from map
                 directionsDisplay.setDirections({routes: []});
 
-                //center map
+                 //center map
                 map.setCenter(myLatLng);
 
+                //error message
+                $("output").html("<div class='alert-danger'>Could not find the distance.</div>");
             }
-        });
-            
+            });
+        
                
+        }
 
-                //if status not OK
-                    //delete route from map
+        var options = {
+            types: ['(cities)']
+        }
+        var input1 = document.getElementById("from");
+        var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 
-                    //center map in London
-
-    }
+        var input2 = document.getElementById("to");
+        var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
