@@ -27,7 +27,7 @@
             origin: document.getElementById("from").value,
             destination: document.getElementById("to").value,
             travelMode: google.maps.TravelMode.DRIVING,
-            unitSystem: google.maps.UnitSystem.METRIC
+            unitSystem: google.maps.UnitSystem.IMPERIAL
         }
         
         directionsService.route(request, function(result, status){
@@ -39,6 +39,12 @@
 
                 //display route using DirectionsRenderer object
                 directionsDisplay.setDirections(result);
+
+                //delete route from map
+                directionsDisplay.setDirections({routes: []});
+
+                //center map
+                map.setCenter(myLatLng);
 
             }
         });
