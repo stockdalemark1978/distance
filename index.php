@@ -26,23 +26,23 @@
             <div class="col-sm-6">
                 <h1>How Far Is It?</h1>
                 <p>Enter Your Starting & Ending Destinations To Calculate The Mileage Between Them.</p>
-                <form action="" class="form-horizontal">
+                <form >
                     <div class="form-group">
                         <label class="col-xs-2 control-label" for="start">Starting Location:</label>
-                        <div class="col-xs-10">
+                        <div class="form-group">
                             <input class="form-control" type="text" id="start" placeholder="Starting Location">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-xs-2 control-label" for="end">Ending Location:</label>
-                        <div class="col-xs-10">
+                        <div class="form-group">
                             <input class="form-control" type="text" id="end" placeholder="Ending Location">
                         </div>
                     </div>
                 </form>
-                <div class="col-xs-offset-2 col-xs-10">
+                
                     <button class="btn btn-success btn-lg" onclick="calcRoute();" type="">Get Distance!</button>
-                </div>
+                
             </div>
         </div>
         <div class="container-fluid">
