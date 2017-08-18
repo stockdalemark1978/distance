@@ -23,32 +23,36 @@
   <body>
     <div class="jumbotron">
         <div class="container-fluid">
-            <h1>How Far Is It?</h1>
-            <p>Enter Your Starting & Ending Destinations To Calculate The Mileage Between Them.</p>
-            <form action="" class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-xs-2 control-label" for="start">Starting Location:</label>
-                    <div class="col-xs-10">
-                        <input class="form-control" type="text" id="start" placeholder="Starting Location">
+            <div class="col-sm-6">
+                <h1>How Far Is It?</h1>
+                <p>Enter Your Starting & Ending Destinations To Calculate The Mileage Between Them.</p>
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-2 control-label" for="start">Starting Location:</label>
+                        <div class="col-xs-10">
+                            <input class="form-control" type="text" id="start" placeholder="Starting Location">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-xs-2 control-label" for="end">Ending Location:</label>
-                    <div class="col-xs-10">
-                        <input class="form-control" type="text" id="end" placeholder="Ending Location">
+                    <div class="form-group">
+                        <label class="col-xs-2 control-label" for="end">Ending Location:</label>
+                        <div class="col-xs-10">
+                            <input class="form-control" type="text" id="end" placeholder="Ending Location">
+                        </div>
                     </div>
+                </form>
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button class="btn btn-success btn-lg" onclick="calcRoute();" type="">Get Distance!</button>
                 </div>
-            </form>
-            <div class="col-xs-offset-2 col-xs-10">
-                <button class="btn btn-success btn-lg" onclick="calcRoute();" type="">Get Distance!</button>
             </div>
         </div>
         <div class="container-fluid">
-            <div id="map">
-                
-            </div>
-            <div id="output">
-                
+            <div class="col-sm-6">
+                <div id="map">
+                    
+                </div>
+                <div id="output">
+                    
+                </div>
             </div>
         </div>
         
